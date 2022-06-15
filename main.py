@@ -10,6 +10,7 @@ in3 = 22
 in4 = 27
 temp1 = 1
 
+GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(in1, GPIO.OUT)
 GPIO.setup(in2, GPIO.OUT)
@@ -130,11 +131,14 @@ try:
             sleep(1)
             brake()
             forward()
+            sleep(0.5)
             brake()
             right()
             sleep(1)
             brake()
             forward()
+            sleep(1)
+            brake()
         if char == ord('c'):
             print("circle")
             right()
@@ -155,11 +159,13 @@ try:
             sleep(1)
             brake()
             forward()
+            sleep(1)
             brake()
             right()
             sleep(1)
             brake()
             forward()
+            sleep(1)
             brake()
         if char == ord('p'):
             print("pentagon")
